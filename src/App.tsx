@@ -549,7 +549,7 @@ export default function App() {
         {/* Footer */}
         <footer className="absolute bottom-0 left-0 right-0 h-10 bg-[#36454f] flex items-center justify-center p-8 z-20">
            <div className="font-intertight text-3 md:text-5 text-brand-base text-center">
-               Created by Stachu, 2026
+               Created by ST4CHU, 2026
            </div>
         </footer>
       </section>
