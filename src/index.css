@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-caveat: "Caveat", cursive;
+  
+  --color-brand-blue: #006994;
+  --color-brand-charcoal: #36454f;
+  --color-brand-base: #F2E9EA;
+}
+
+@keyframes move-background {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-1000px, 0, 0); }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: -50vh;
+  left: 0;
+  right: 0;
+  bottom: -50vh;
+  display: block;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 200%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 200%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  animation: move-background 40s linear infinite;
+  opacity: 1;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-base text-brand-charcoal font-sans;
+  }
+}
+
+.timeline-line {
+  background: repeating-linear-gradient(
+    90deg,
+    #36454f 0,
+    #36454f 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.notebook-paper {
+  background-color: #fff;
+  background-image: 
+    linear-gradient(#9198e5 1px, transparent 1px),
+    linear-gradient(90deg, #eee 1px, transparent 1px);
+  background-size: 100% 2rem, 2rem 100%;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
