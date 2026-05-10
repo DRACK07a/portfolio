@@ -249,7 +249,7 @@ const RocketAnimation = () => {
     <div className="fixed inset-1 pointer-events-none z-[1] overflow-hidden">
       <motion.div
         key={key}
-        initial={{ x: '-20%', y: '40%', scale: 1, opacity: 0, rotate: 0 }}
+        initial={{ x: '-50%', y: '40%', scale: 1, opacity: 0, rotate: 0 }}
         animate={{ 
           x: '120%', 
           y: '20%',
